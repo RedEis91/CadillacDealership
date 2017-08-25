@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "style.css" />
+   
+   
+   <title>Eisenhauer Cadillac</title>
+</head>
+<body id="davidBanner">
+
+<div class="container">
+ 
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="davidBanner" data-toggle="dropdown"><img src="eisenhauercadillac.png" class="logo">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="#">HOME</a></li>
+      <li><a tabindex="-1" href="#">WELCOME</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">SEARCH <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Search New</a></li>
+          <li><a tabindex="-1" href="#">Search Used</a></li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">Search Trucks <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Search SUVs</a></li>
+              <li><a href="#">Search Pickups</a></li>
+            </ul>
+          </li>
+          <li><a tabindex="-1" href="#">Request Quote</a></li>
+        </ul>
+      </li>
+      <li><a tabindex="-1" href="#">CONTACT</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+<div class="page">
+  
+  <img src="imageone.png" alt="imgone">
+  <img src="PartTwo.jpg" alt="imgtwo" class="imgmargin">
+<!--  <img src="PartThree.jpg" alt="imgthree" class="logo">-->
+  
+</div> 
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+//window.onhover = function(e) {
+//  if (!e.target.matches('.dropbtn')) {
+//    var myDropdown = document.getElementById("myDropdown");
+//      if (myDropdown.classList.contains('show')) {
+//        myDropdown.classList.remove('show');
+//      }
+//  }
+//}
+
+</script>
+</body>
+</html>
